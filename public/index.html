@@ -6,7 +6,7 @@
 		<script src="./scripts.js"></script>
         <!-- Link to your script file(s) and CSS in here somewhere -->
     </head>
-    <body onload="showHideShots()">
+    <body onload="onStartup()">
 
 		<form id="userinput" class="" action="javascript:void(0);">
 			<input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="showHideShots()">
@@ -32,16 +32,59 @@
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
 		</form>
-		<br/><br/>
+		<span class="shots"><br></span>
+		
     <button type="button" id="play" onclick="playGame()">Play</button>
     <button type="button" id="startover" onclick="startOver()">Start Over</button>
+    
+    <button type="button" id="rules" onclick="rules()">Rules</button>
 
     <!-- Your interface markup goes here -->
+    <div id="result" class="Result">
+        <h1 id="gameResults">Result</h1>
+
+		<img id="playerImage" alt="player image" src="./img/rock.jpg" >
+		<img id="opponentImage" class ="shots" alt="opponent image" src="./img/rock.jpg" >
+        
+
+
+    </div>
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
-    
+    <div id="rules">
+		<p>Rules for RPS:</p>
+		<br>
+		<ul>Scissors beats Paper</ul>
+		<ul>Paper Beats Rock</ul>
+		<ul>Rock beats Scissors</ul>
+		<br>
+		<p>Rules for RPSLS:</p>
+		<br>
+		<ul>Scissors beats Paper</ul>
+		<ul>Paper Beats Rock</ul>
+		<ul>Rock beats Lizard</ul>
+		<ul>Lizard beats Spock</ul>
+		<ul>Spock beats Scissors</ul>
+		<ul>Scissors Beats Lizard</ul>
+		<ul>Lizard Beats Paper</ul>
+		<ul>Paper beats Spock</ul>
+		<ul>Spock beats Rock</ul>
+		<ul>Rock beats Scissors</ul>
+
+
+	</div>
     <!-- You will want to include something hidden by default, like a <div> or <p> that you can show to -->
     <!-- display the results of the game. Your startOver() function should also clear the result and hide -->
     <!-- the block again. -->
 
+	<div id="otherImages" class="result">
+		<img alt="paper" src="./img/paper.jpg" >
+		<img alt="scissors" src="./img/scissors.jpg" >
+		<img alt="lizard" src="./img/lizard.jpg" >
+		<img alt="spock" src="./img/spock.jpg" >
+
+
+
+	</div>
+
     </body>
-</html>
+</html> 
