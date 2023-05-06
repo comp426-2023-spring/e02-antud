@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>RPS &amp RPSLS</title>
+        <title>RPS &amp; RPSLS</title>
 		<link href="./styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="./scripts.js"></script>
@@ -9,7 +9,7 @@
     <body onload="onStartup()">
 
 		<form id="userinput" class="" action="javascript:void(0);">
-			<input type="radio" id="rps" name="game" value="rps" checked="" onclick="showHideShots()">
+			<input type="radio" id="rps" name="game" value="rps" checked onclick="showHideShots()">
 			<label for="rps">Play rock, paper, scissors?</label>
 			<br>
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="showHideShots()">
@@ -18,7 +18,7 @@
 			<input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="showHideShots()">
 			<label for="opponent">Play against an opponent?</label>
 			<br>
-			<input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked="">
+			<input type="radio" id="rock" name="shot" value="rock" class="rps shots">
 			<label class="shots rps">Rock</label>
 			<input type="radio" id="paper" name="shot" value="paper" class="rps shots">
 			<label class="shots rps">Paper</label>
@@ -31,6 +31,7 @@
 <!--			<br/><br/>
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
+	  <button type="button" id="submit"></button>
 		</form>
 		<span class="shots"><br></span>		
     <button type="button" id="play" onclick="playGame()">Play</button>
@@ -39,7 +40,6 @@
     <!-- Your interface markup goes here -->
     <div id="result" class="Result">
         <h1 id="gameResults">Result</h1>
-
 		<img id="playerImage" alt="player image" src="./img/rock.jpg">
 		<img id="opponentImage" class ="shots" alt="opponent image" src="./img/rock.jpg">
     </div>
